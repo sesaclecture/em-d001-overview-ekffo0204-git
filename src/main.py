@@ -4,7 +4,7 @@
 #
 # 강의 시간에 실습한 Linux 명령어를 활용하세요.
 def get_current_path_command():
-    raise NotImplementedError
+    return "pwd"
 
 
 # 문제 2.
@@ -21,7 +21,10 @@ def get_current_path_command():
 #
 # 강의 시간에 사용한 옵션을 활용하세요.
 def make_list_command(hidden):
-    raise NotImplementedError
+    if hidden: #숨김파일 포함
+        return "ls -al"
+    else: #숨김파일 미포함
+        return "ls"
 
 
 # 문제 3.
@@ -30,7 +33,7 @@ def make_list_command(hidden):
 #
 # path 인자는 이동할 디렉토리 경로입니다.
 def make_change_directory_command(path):
-    raise NotImplementedError
+    return f"cd {path}"
 
 
 # 문제 4.
