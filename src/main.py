@@ -44,7 +44,7 @@ def make_change_directory_command(path):
 #
 # 강의 중 확인한 U-Boot 명령어를 활용하세요.
 def make_printenv_command(env_name):
-    raise NotImplementedError
+    return f"printenv {env_name}"
 
 
 # 문제 5.
@@ -62,4 +62,4 @@ def make_printenv_command(env_name):
 #
 # 강의 중 실습한 bootargs 형식을 참고하세요.
 def make_bootargs_command(console, rootfs):
-    raise NotImplementedError
+    return f"setenv setenv bootargs console={console}, root={rootfs} rw"
